@@ -57,12 +57,16 @@
 
 #define configUSE_COUNTING_SEMAPHORES    1		 //添加
 #define configUSE_QUEUE_SETS             1		 //添加
+#define configUSE_TIMERS                1 		 //添加
+#define configTIMER_TASK_PRIORITY       ( configMAX_PRIORITIES - 1 )   //添加
+#define configTIMER_QUEUE_LENGTH        10							   //添加
+#define configTIMER_TASK_STACK_DEPTH    ( configMINIMAL_STACK_SIZE * 2 )  //添加
 
 #define configENABLE_FPU                         0
 #define configENABLE_MPU                         0
 
 #define configUSE_PREEMPTION                     1
-#define configSUPPORT_STATIC_ALLOCATION          1
+#define configSUPPORT_STATIC_ALLOCATION          0
 #define configSUPPORT_DYNAMIC_ALLOCATION         1
 #define configUSE_IDLE_HOOK                      0
 #define configUSE_TICK_HOOK                      0
